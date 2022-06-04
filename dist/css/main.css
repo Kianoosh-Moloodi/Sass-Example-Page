@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+.text-primary {
+  color: #af0000cc; }
+
+.bebas {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: lighter;
+  font-size: 200%; }
+
+.text-center {
+  text-align: center; }
+
+.main-nav-flex {
+  display: flex; }
+
+.bottom-line {
+  height: 2px;
+  width: 5rem;
+  background: #af0000cc;
+  display: block;
+  margin: 0 auto 2rem auto; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.btn-primary, .btn-light, .btn-dark {
+  font-weight: bold;
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.btn-primary {
+  color: #333;
+  background-color: #af0000cc; }
+
+.btn-light {
+  color: #333;
+  background-color: #ffffff; }
+
+.btn-dark {
+  color: #333;
+  background-color: black; }
+
+button[class^='btn-']:hover, a[class^='btn-']:hover, input[class^='btn-']:hover {
+  background-color: #af0000cc;
+  color: white; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(157, 157, 157, 0); }
+  100% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } }
+
+.pulse {
+  animation: pulse 1.5s infinite; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Saira', sans-serif;
+  line-height: 1.5;
+  background: #ffffff; }
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: border-color 0.5s; }
+  a:hover {
+    border-color: #e4e4e4; }
+  a.active {
+    border-color: #af0000cc; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem; }
+  #main-nav h1 {
+    font-weight: 300; }
+
+li {
+  padding: 0 1.5rem; }
+
+#header-home {
+  background: linear-gradient(rgba(20, 20, 20, 0.627), rgba(20, 20, 20, 0.627)), url("/dist/img/marlon-5PUy-FMdC3I-unsplash.jpg"), black no-repeat center center/cover;
+  height: 100vh;
+  color: #fff; }
+  #header-home .header-content {
+    text-align: center;
+    padding-top: 10%; }
+
+#home-1 .items {
+  display: grid;
+  margin-top: 3rem;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); }
+  #home-1 .items .fas {
+    color: #af0000cc;
+    padding-bottom: 0.5rem; }
+
+#home-2 .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  #home-2 .items li {
+    line-height: 2; }
+    #home-2 .items li.items-title {
+      font-size: 1.5rem; }
+    #home-2 .items li.items-number {
+      font-size: 2rem;
+      font-weight: bold; }
+  #home-2 .items div {
+    padding: 3rem 0; }
+    #home-2 .items div:nth-child(odd) {
+      background: #af0000cc;
+      color: #fff; }
+    #home-2 .items div:nth-child(even) {
+      background: #e4e4e4; }
+
+#home-3 .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center; }
+  #home-3 .process-step {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    background: #af0000cc;
+    color: #fff;
+    border-radius: 5%;
+    height: 10px;
+    width: 10px;
+    line-height: 10px;
+    padding: 0.7rem;
+    --wekit-transition: $property $duration;
+    --ms-transition: $property $duration;
+    --o-transition: $property $duration;
+    transition: all 1s; }
+  #home-3 .process-icon {
+    border-radius: 5%;
+    background: black;
+    color: #fff;
+    padding: 1.5rem;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    position: relative;
+    --wekit-transition: $property $duration;
+    --ms-transition: $property $duration;
+    --o-transition: $property $duration;
+    transition: all 0.5s; }
+    #home-3 .process-icon:hover {
+      background: #af0000cc;
+      width: 90px;
+      height: 90px;
+      line-height: 90px; }
+      #home-3 .process-icon:hover .process-step {
+        background: black;
+        color: #fff; }
+
+#main-footer {
+  background: black;
+  color: #fff;
+  height: 5rem; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center; }
+    #main-footer .footer-content .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50px;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem; }
+      #main-footer .footer-content .social .fab:hover {
+        background: #af0000cc; }
+
+@media (max-width: 820px) {
+  #header-home {
+    height: 70vh; } }
+
+@media (max-width: 740px) {
+  #main-nav {
+    flex-direction: column; }
+    #main-nav ul {
+      padding-top: 1rem; } }
+
+@media (max-width: 550px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center; }
+    #main-nav ul {
+      padding-top: 1rem; }
+    #main-nav li {
+      padding: 0.5rem; }
+  #home-1 .items, #home-2 .items, #home-3 .process {
+    grid-template-columns: 1fr; }
+  #home-1 .items div {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 1rem; }
+    #home-1 .items div:last-child {
+      border: none;
+      padding-bottom: 0; }
+  #main-footer {
+    height: 8rem; }
+    #main-footer .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem; }
+      #main-footer .footer-content:first-child {
+        font-size: 1.1rem; } }

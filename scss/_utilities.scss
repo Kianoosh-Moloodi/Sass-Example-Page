@@ -1,0 +1,118 @@
+.container{
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.text-primary{
+    color: $primary-color;
+}
+
+.bebas{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: lighter;
+    font-size: 200%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.main-nav-flex{
+    display: flex;
+}
+
+.bottom-line{
+    height: 2px;
+    width: 5rem;
+    background: $primary-color;
+    display: block;
+    margin: 0 auto 2rem auto;
+}
+
+.py{
+    &-1{
+        padding: 1rem 0;
+    }
+    &-2{
+        padding: 2rem 0;
+    }
+    &-3{
+        padding: 3rem 0;
+    }
+    &-4{
+        padding: 4rem 0;
+    }
+}
+
+.my{
+    &-1{
+        margin: 1rem 0;
+    }
+    &-2{
+        margin: 2rem 0;
+    }
+    &-3{
+        margin: 3rem 0;
+    }
+    &-4{
+        margin: 4rem 0;
+    }
+}
+
+%btn-shared{
+    font-weight: bold;
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 2rem;
+    transition: all 0.5s;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.btn{
+    &-primary{
+        @extend %btn-shared;
+        color: #333;
+        background-color: $primary-color;
+    }
+    &-light{
+        @extend %btn-shared;
+        color: #333;
+        background-color: $light-color;
+    }
+    &-dark{
+        @extend %btn-shared;
+        color: #333;
+        background-color: $dark-color;
+    }
+}
+
+button[class^='btn-']:hover,a[class^='btn-']:hover,input[class^='btn-']:hover{
+    background-color: $primary-color;
+    color: white;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.97);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(157, 157, 157, 0);
+	}
+
+	100% {
+		transform: scale(0.97);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.pulse{
+    animation: pulse 1.5s infinite;
+}

@@ -1,0 +1,185 @@
+@import 'variables';
+@import 'utilities';
+@import 'functions';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Saira', sans-serif;
+    line-height: 1.5;
+    background: $light-color;
+}
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    @include transition(border-color, 0.5s);
+    &:hover{
+        border-color: $medium-color;
+    }
+    &.active{
+        border-color: $primary-color;
+    }
+    
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+#main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    h1{
+        font-weight: 300;
+    }
+}
+
+
+li{
+    padding: 0 1.5rem;
+}
+
+#header{
+    &-home{
+        background:linear-gradient(rgba(20, 20, 20, 0.627), rgba(20, 20, 20, 0.627)), $bg-image, $dark-color no-repeat center center/cover;
+        height: 100vh;
+        color: #fff;
+        .header-content{
+        text-align: center;
+        padding-top: 10%;
+        }
+    }
+    
+}
+
+#home{
+    &-1{
+        .items{
+            display: grid;
+            margin-top: 3rem;
+            gap: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+            .fas{
+                color: $primary-color;
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+    &-2{
+        .items{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            li{
+                line-height: 2;
+                &.items-title{
+                    font-size: 1.5rem;
+                }
+                &.items-number{
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+            div{
+                padding: 3rem 0;
+                &:nth-child(odd){
+                    background: $primary-color;
+                    color: #fff;
+                }
+                &:nth-child(even){
+                    background: $medium-color;
+                }
+            }
+        }
+    }
+    &-3{
+        .process{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+            &-step{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 1rem;
+                background: $primary-color;
+                color: set-text-color($primary-color);
+                border-radius: 5%;
+                height: 10px;
+                width: 10px;
+                line-height: 10px;
+                padding: 0.7rem;
+                @include transition(all, 1s);
+            }
+            &-icon{
+                border-radius: 5%;
+                background: $dark-color;
+                color: set-text-color($primary-color);
+                padding: 1.5rem;
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                text-align: center;
+                position: relative;
+                @include transition(all, 0.5s);
+
+                &:hover{
+                    background: $primary-color;
+                    width: 90px;
+                    height: 90px;
+                    line-height: 90px;
+                    .process-step{
+                        background: $dark-color;
+                        color: set-text-color($dark-color);
+                    }
+                }
+    
+            }
+        }
+        
+    }
+}
+
+#main-footer{
+    background: $dark-color;
+    color: #fff;
+    height: 5rem;
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+        align-items: center;
+        .social .fab{
+            margin-right: 1rem;
+            border: 2px #fff solid;
+            border-radius: 50px;
+            height: 20px;
+            width: 20px;
+            line-height: 20px;
+            text-align: center;
+            padding: 0.5rem;
+
+            &:hover{
+                background: $primary-color;
+            }
+        }
+    }
+}
+
+
+
+
+@import 'media';
