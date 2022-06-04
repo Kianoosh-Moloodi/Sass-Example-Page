@@ -231,17 +231,25 @@ li {
       #main-footer .footer-content .social .fab:hover {
         background: #af0000cc; }
 
+@media (min-width: 1100px) {
+  #header-home {
+    font-size: 28px; } }
+
 @media (max-width: 820px) {
   #header-home {
     height: 70vh; } }
 
 @media (max-width: 740px) {
+  #header-home {
+    height: 100vh; }
   #main-nav {
     flex-direction: column; }
     #main-nav ul {
       padding-top: 1rem; } }
 
 @media (max-width: 550px) {
+  #header-home {
+    height: 100vh; }
   #main-nav {
     flex-direction: column;
     align-items: center; }
